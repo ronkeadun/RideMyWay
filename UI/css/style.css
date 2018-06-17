@@ -1,0 +1,143 @@
+body {
+	margin: 0;
+	font-family: Roboto;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #212529;
+	text-align: left;
+	max-width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	background-color: #fff;
+	font-family: 'Raleway', sans-serif;
+}
+
+#login-page{
+	width: 360px;
+	padding: 10% 0 0;
+	margin: auto;
+}
+
+.form{
+	position: relative;
+	/* background: rgba(45, 20, 10, 0.7); */
+	/* max-width: 360px;
+	margin: 0 auto 100px;
+	padding: 45px; */
+	text-align: center;
+
+}
+
+.form input{
+	font-family: "Roboto" sans-serif;
+	/*outline: 1;*/
+	background: #f2f2f2;
+	width: 90%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;
+	font-size: 20px;
+}
+
+.form button{
+	font-family: "Roboto" sans-serif;
+	text-transform: uppercase;
+	background: #ca9548;
+	width: 96%;
+	border: 0;
+	padding: 15px;
+	color: #ffffff;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.form button:hover, .form button:active{
+	background: #dca350;
+}
+
+.form .message{
+	margin: 15px 0 0;
+	color: aliceblue;
+	font-size: 20px;
+}
+
+.form .message a{
+	color: #ca9548;
+	text-decoration: none;
+}
+
+.message a:hover, .message a:active{
+	color: #dca350;
+}
+
+.form #register-form{
+	display: none;
+}
+
+button a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.navbar {
+	background-color: #00BCD4;
+	height: 4rem;
+	padding: 1.5rem;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.navbar .logo {
+	color: #fff;
+	font-size: 2rem;
+	text-decoration: none;
+	font-family: 'Kurale', serif;
+}
+.main-content {
+	min-height: 100%
+}
+.main-content .jumbotron {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	height: 82.3vh;
+	background-image: url('../images/headerBackground.jpg');
+	background-position: center;
+	background-size: cover;
+	top: 6rem;
+	display: flex;
+	justify-content: space-between;
+	overflow: auto;
+}
+.main-content .jumbotron .signin-container {
+	width: 30%;
+	background: rgba(45, 20, 10, 0.7);
+	margin: 3rem 2rem 15rem 2rem;
+	height: 30rem;
+	padding: 2rem;
+}
+.main-content .jumbotron .signin-container h1 {
+	color: #fff;
+
+}
+.info-section {
+	color: #ffff;
+	font-size: 3rem;
+	margin: 0 auto;
+}
+.info-section h1, .info-section h6 {
+	text-align: center;
+	font-family: 'Kurale', serif;
+	margin: 1rem;
+}
+footer {
+	height: 3rem;
+	padding: 1.5rem;
+	background-color: #00BCD4;
+	position: absolute;
+	bottom: 0;
+	color: #fff;
+	text-align: center;
+	width: 100%;
+}
