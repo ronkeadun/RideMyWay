@@ -155,6 +155,11 @@ footer {
   .nav-link li:hover {
     background-color: #6ccdda;
   }
+
+  .nav-link a{
+  	text-decoration: none;
+  	color: #fff;
+  }
   .requests-board {
     padding-top: 8rem;
     display: flex;
