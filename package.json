@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel": "babel",
     "start": "babel-node app.js",
-    "start:dev": "babel-watch app.js"
+    "start:dev": "nodemon app.js --exec babel-node"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
     "express": "^4.16.3"
   }
 }
