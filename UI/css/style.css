@@ -21,17 +21,12 @@ body {
 
 .form{
 	position: relative;
-	/* background: rgba(45, 20, 10, 0.7); */
-	/* max-width: 360px;
-	margin: 0 auto 100px;
-	padding: 45px; */
 	text-align: center;
 
 }
 
 .form input{
 	font-family: "Roboto" sans-serif;
-	/*outline: 1;*/
 	background: #f2f2f2;
 	width: 90%;
 	border: 0;
@@ -59,7 +54,7 @@ body {
 .form .message{
 	margin: 15px 0 0;
 	color: aliceblue;
-	font-size: 20px;
+	font-size: 15px;
 }
 
 .form .message a{
@@ -114,7 +109,7 @@ button a{
 	width: 30%;
 	background: rgba(45, 20, 10, 0.7);
 	margin: 3rem 2rem 15rem 2rem;
-	height: 30rem;
+	height: 35rem;
 	padding: 2rem;
 }
 .main-content .jumbotron .signin-container h1 {
@@ -141,3 +136,6 @@ footer {
 	text-align: center;
 	width: 100%;
 }
+
+
+
