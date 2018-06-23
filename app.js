@@ -1,16 +1,11 @@
-import express from "express";
+//load applicaton server using express
+import express from "express";  //load express module/library
 import path from "path";
 import bodyParser from "body-parser";
 import volleyball from "volleyball";
 import router from "./server/router/rides";
 
-const app = express();
-
-//configure app
-app.set("view engine", "ejs");
-app.set("views",path.join(__dirname, "server/views"));
-
-
+const app = express();   //create a new instance of express
 
 
 //use middleware
@@ -25,6 +20,7 @@ app.use("/api/v1", router);
 
 const port = process.env.PORT || 3000;
 
+//start up application server
 app.listen(3000, ()=>{
-	console.log(`listening on port ${ port }`)
+	console.log(`Server is up and listening on port ${ port }`)
 })

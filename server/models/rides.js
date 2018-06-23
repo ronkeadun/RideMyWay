@@ -28,9 +28,3 @@ export const rides = [
 		Take_off_time: "12:00pm"
 	}
 ]
-
-export const rideOffers = [
-	{id:1, desc: "ride1"},
-	{id:2, desc: "ride2"},
-	{id:3, desc: "ride3"}
-];
