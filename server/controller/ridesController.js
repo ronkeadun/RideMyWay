@@ -1,4 +1,4 @@
-import { rides } from "./../models/rides";
+import { rides } from "./../model/rides";
 
 class Rides{
 	static getAllRides(req, res){
