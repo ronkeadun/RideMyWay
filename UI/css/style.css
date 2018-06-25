@@ -195,3 +195,98 @@ footer {
   background-color: #00bcd4;
   border: 1px solid #fff;
 }
+
+
+
+/*Profile page */
+.all_content{
+	margin:auto;
+}
+#profile_grid{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    grid-column-gap: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+#profile_data{
+    padding:5px;
+    background-color:rgba(36, 35, 35, 0.637);
+}
+
+#profile_img{
+    max-width:250px;
+    max-height:250px;
+    border-radius: 50%;
+}
+
+#profile_grid h1 strong, #profile_grid form label,#profile_grid form input{
+    font-size: 18px;
+    color:rgb(209, 209, 209);
+}
+#profile_grid form input{
+    color: #808080;
+    background-color: #222222;
+    padding:10px;
+    border:none;
+}
+#profile_grid form a{
+    width:50px;
+}
+
+/*ride numbers */
+#profile_grid div label{
+    color: #e9e3e3;
+    font-size: 16px;
+    padding: 10px;
+    margin:10px;
+}
+#profile_grid div span{
+    font-size: 16px;
+    border: solid 2px #dca350;
+    padding: 10px;
+    margin:10px;
+    background-color: #222222;
+    color:#808080;
+}
+
+/*table topic styling*/
+ .ride_tables{
+    height: 25px;
+    width:20%;
+    color:#fff;
+    background-color:#dca350;
+    text-align: center;
+    padding-top:8px;
+    
+}
+/*table styles */
+table{
+    box-sizing: border-box;
+    border-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size:15px;
+}
+table tr th{
+    font-size: 15px;
+    color:#dca350;
+    line-height: 1.5;
+    padding-top:16px;
+    padding-bottom:16px;
+    margin: 15px;
+    text-transform: uppercase;
+    background-color: #393939;
+}
+table tr td{
+    font-size:17px;
+    color: #808080;
+    line-height: 1.5;
+    background-color: #222222;
+    padding-top:14px;
+    padding-bottom:14px;
+    padding-right: 10px;
+
+}
+
