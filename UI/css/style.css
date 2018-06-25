@@ -95,7 +95,6 @@ button a{
 .main-content .jumbotron {
 	position: absolute;
 	width: 100%;
-	top: 0;
 	height: 82.3vh;
 	background-image: url('../images/headerBackground.jpg');
 	background-position: center;
