@@ -19,7 +19,7 @@
       </li>
       <li>
         <i class="fa fa-user"></i>
-        My Profile
+        <a href="profile_page.html">My Profile</a> 
       </li>
       <li>
         <i class="fa fa-power-off"></i>
@@ -27,32 +27,24 @@
       </li>
     </ul>
 </nav>
+
 <section class="main-content">
   <div class="jumbotron">
-        <div class="info-section">
-            <h1>Welcome to RideMyWay</h1>
-            <h6>Experience free and cheap way to move around.</h6>
-        </div>
-        <div class="signin-container">
-            <div class="form">
-                <form id="login-form">
-                    <h1>Create Ride Offer</h1>
-                    <input type="text" placeholder="Requester" />
-                    <input type="password" placeholder="Pickup Location" />
-                    <input type="text" placeholder="Destination" />
-                    <input type="text" placeholder="Take off time" />
-                    <button><a href="dashboard.html">Submit</a></button>
-                </form>
-            </div>
-        </div>
-    </div>
+    <form id="create-ride">
+      <div class="form">
+        <h1>Create Ride Offer</h1>
+        <input type="password" placeholder="Pickup Location" />
+        <input type="text" placeholder="Destination" />
+        <input type="text" placeholder="Take off time" />
+        <input type="text" placeholder="Number of Available Seats" />
+        <a href="dashboard.html"><input type="button" value="ADD RIDE" /></a>
+      </div>
+    </form>
+  </div>
 </section>
+</form>
 <footer>
     <span>Copyright 2018</span>
-    <div class="pull-right">
-      <a href="http://">Policy</a>
-      <a href="http://">Terms and Condition></a>
-    </div>
 </footer>
 </body>
 </html>
