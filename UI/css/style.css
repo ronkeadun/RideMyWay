@@ -47,6 +47,24 @@ body {
 	font-size: 20px;
 	cursor: pointer;
 }
+a input{
+  font-family: "Roboto" sans-serif;
+  text-transform: uppercase;
+  background: #ca9548;
+  width: 50%;
+  border: 0;
+  padding: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+select{
+  padding: 10px;
+  color:#ffffff;
+  background: #ca9548;
+  font-size: 15px;
+}
 
 .form a input:hover, .form a input:active{
 	background: #dca350;
@@ -103,9 +121,9 @@ body {
 	text-decoration: none;
 	font-family: 'Kurale', serif;
 }
-.main-content {
+/*.main-content {
 	min-height: 100%
-}
+}*/
 .main-content .jumbotron {
 	position: absolute;
 	width: 100%; 
@@ -284,22 +302,29 @@ table{
 }
 table tr th{
     font-size: 15px;
-    color:#dca350;
+    color:#ffffff;
     line-height: 1.5;
-    padding-top:16px;
-    padding-bottom:16px;
+    padding: 16px 10px;
     margin: 15px;
     text-transform: uppercase;
     background-color: #393939;
 }
 table tr td{
     font-size:17px;
-    color: #808080;
+    color: #ffffff;
     line-height: 1.5;
     background-color: #222222;
-    padding-top:14px;
-    padding-bottom:14px;
-    padding-right: 10px;
-
+    padding: 0.6em 2em;
 }
 
+h4{
+  padding: 2em 0 1em;
+  text-align: center;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px){
+  body{
+    max-width: 100%;
+    height: 100%;
+  }
+}

@@ -17,6 +17,8 @@ router.post("/rides", Rides.postAllRide);
 //create a ride route
 router.post("/ride", Rides.createARide);
 
+router.put("/rides/:rideId", Rides.editRide);
+
 
 router.get("/ride/info/:rideId", Rides.getRideInfo);
 

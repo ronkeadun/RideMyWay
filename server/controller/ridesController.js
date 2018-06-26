@@ -38,6 +38,14 @@ class Rides{
 		res.send(response);
 		}
 	}
+
+	static editRide(req, res){
+		let id = req.params.rideId;
+		let ride = rides[id];
+		let newRide = req.body;
+		Object.assign(ride,newRide);
+		res.send(Object.assign(ride,newRide))
+	}
 }
 
 export default Rides;
