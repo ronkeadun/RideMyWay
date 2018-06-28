@@ -14,16 +14,10 @@ body {
 	font-family: 'Raleway', sans-serif;
 }
 
-#login-page{
-	width: 360px;
-	padding: 10% 0 0;
-	margin: auto;
-}
 
 .form{
 	position: relative;
 	text-align: center;
-
 }
 
 .form input{
@@ -71,7 +65,7 @@ select{
 }
 
 .form .message{
-	margin: 15px 0 0;
+	margin: 0;
 	color: aliceblue;
 	font-size: 15px;
 }
@@ -90,7 +84,7 @@ select{
 }
 
 #create-ride{
-  width: 30%;
+  width: 40%;
   background: rgba(45, 20, 10, 0.7);
   margin: auto;
   height: 30rem;
@@ -102,15 +96,10 @@ select{
   margin: auto;
 }
 
-/*button a{
-	text-decoration: none;
-	color: #fff;
-}*/
-
 .navbar {
 	background-color: #00BCD4;
 	height: 3rem;
-	padding: 1.5rem;
+	padding: 1rem;
 	position: absolute;
 	top: 0;
 	width: 100%;
@@ -121,17 +110,18 @@ select{
 	text-decoration: none;
 	font-family: 'Kurale', serif;
 }
-/*.main-content {
+.main-content {
 	min-height: 100%
-}*/
+}
 .main-content .jumbotron {
 	position: absolute;
 	width: 100%; 
-	height: 82.3vh;
+	height: 80.3vh;
 	background-image: url('../images/headerBackground.jpg');
 	background-position: center;
 	background-size: cover;
 	top: 6rem;
+  margin-top: -20px;
 	display: flex;
 	justify-content: space-between;
 	overflow: auto;
@@ -139,8 +129,8 @@ select{
 .main-content .jumbotron .signin-container {
 	width: 30%;
 	background: rgba(45, 20, 10, 0.7);
-	margin: 3rem 2rem 15rem 2rem;
-	height: 30rem;
+	margin: 1rem 2rem 0 2rem;
+	height: 28rem;
 	padding: 2rem;
 }
 .main-content .jumbotron .signin-container h1 {
@@ -176,32 +166,32 @@ footer {
     color: #fff;
     margin: 0 2rem;
   }
-  .nav-link li {
-    display: inline-block;
-    padding: 1rem;
-    cursor: pointer;
-    font-size: 1.2rem;
-    border-radius: 1rem;
-  }
-  .nav-link li:hover {
-    background-color: #6ccdda;
-  }
+.nav-link li {
+  display: inline-block;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+}
+.nav-link li:hover {
+  background-color: #6ccdda;
+}
 
-  .nav-link a{
-  	text-decoration: none;
-  	color: #fff;
-  }
+.nav-link a{
+  text-decoration: none;
+  color: #fff;
+}
 
-  .requests-board {
-    padding-top: 8rem;
-    display: flex;
-    justify-content: space-around;
+.requests-board {
+  padding-top: 8rem;
+  display: flex;
+  justify-content: space-around;
 }
 .requests-card {
   width: 20%;
   border: 1px solid #ccc;
   border-radius: 1rem;
-  height: 320px;
+  height: 370px;
 }
 .requests-card ul {
   list-style: none;
@@ -212,14 +202,14 @@ footer {
   border-bottom: 1px dashed #ccc;
 }
 .join-ride-btn {
-    padding: .8rem;
-    border-radius: .3rem;
-    font-size: 1rem;
-    float: right;
-    margin-right: 1rem;
-    color: #00bcd4;
-    cursor: pointer;
-    border: 1px solid #00bcd4;
+  padding: .8rem;
+  border-radius: .3rem;
+  font-size: 1rem;
+  float: right;
+  margin-right: 1rem;
+  color: #00bcd4;
+  cursor: pointer;
+  border: 1px solid #00bcd4;
 }
 .join-ride-btn:hover {
   color: #fff;
@@ -234,33 +224,41 @@ footer {
 	margin:auto;
 }
 #profile_grid{
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 2.5fr;
-    grid-column-gap: 50px;
-    text-align: center;
-    margin-bottom: 50px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  grid-column-gap: 50px;
+  text-align: center;
+  margin-bottom: 50px;
 }
 #profile_data{
-    padding:5px;
-    background-color:rgba(36, 35, 35, 0.637);
+  position: fixed;
+  left:50px;
+  padding:5px;
+  background-color:rgba(36, 35, 35, 0.637);
+  height: 33em;
+}
+
+#prof_tables{
+  position: relative;
+  left:600px;
 }
 
 #profile_img{
-    max-width:250px;
-    max-height:250px;
-    border-radius: 50%;
+  max-width:250px;
+  max-height:250px;
+  border-radius: 50%;
 }
 
 #profile_grid h1 strong, #profile_grid form label,#profile_grid form input{
-    font-size: 18px;
-    color:rgb(209, 209, 209);
+  font-size: 18px;
+  color:rgb(209, 209, 209);
 }
 #profile_grid form input{
-    color: #808080;
-    background-color: #222222;
-    padding:10px;
-    border:none;
+  color: #808080;
+  background-color: #222222;
+  padding:10px;
+  border:none;
 }
 #profile_grid form a{
     width:50px;
@@ -268,53 +266,52 @@ footer {
 
 /*ride numbers */
 #profile_grid div label{
-    color: #e9e3e3;
-    font-size: 16px;
-    padding: 10px;
-    margin:10px;
+  color: #e9e3e3;
+  font-size: 16px;
+  padding: 10px;
+  margin:10px;
 }
 #profile_grid div span{
-    font-size: 16px;
-    border: solid 2px #dca350;
-    padding: 10px;
-    margin:10px;
-    background-color: #222222;
-    color:#808080;
+  font-size: 16px;
+  border: solid 2px #dca350;
+  padding: 10px;
+  margin:10px;
+  background-color: #222222;
+  color:#808080;
 }
 
-/*table topic styling*/
- .ride_tables{
-    height: 25px;
-    width:20%;
-    color:#fff;
-    background-color:#dca350;
-    text-align: center;
-    padding-top:8px;
-    
+/*table heading styling*/
+.ride_tables{
+  height: 25px;
+  width:20%;
+  color:#fff;
+  background-color:#dca350;
+  text-align: center;
+  padding-top:8px;
 }
 /*table styles */
 table{
-    box-sizing: border-box;
-    border-spacing: 2px;
-    text-align: center;
-    margin-bottom: 30px;
-    font-size:15px;
+  box-sizing: border-box;
+  border-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size:15px;
 }
 table tr th{
-    font-size: 15px;
-    color:#ffffff;
-    line-height: 1.5;
-    padding: 16px 10px;
-    margin: 15px;
-    text-transform: uppercase;
-    background-color: #393939;
+  font-size: 15px;
+  color:#ffffff;
+  line-height: 1.5;
+  padding: 16px 10px;
+  margin: 15px;
+  text-transform: uppercase;
+  background-color: #393939;
 }
 table tr td{
-    font-size:17px;
-    color: #ffffff;
-    line-height: 1.5;
-    background-color: #222222;
-    padding: 0.6em 2em;
+  font-size:17px;
+  color: #ffffff;
+  line-height: 1.5;
+  background-color: #222222;
+  padding: 0.6em 2em;
 }
 
 h4{
@@ -322,9 +319,125 @@ h4{
   text-align: center;
 }
 
-@media only screen and (min-width: 480px) and (max-width: 767px){
+@media only screen and (min-width: 420px) and (max-width: 767px){
   body{
-    max-width: 100%;
-    height: 100%;
+    font-size: 0.6rem;
+  }
+  .nav-link {
+    position: absolute;
+    left: -35px;
+    margin: -50px 0 0;
+  }
+  .nav-link li {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 0.5rem;
+  }
+  .navbar .logo{
+    visibility: hidden;
+  }
+
+  .info-section{
+    font-size: 1.5rem;
+  }
+  .form input{
+    margin: 0 0 10px;
+    padding: 10px;
+    font-size: 10px;
+  }
+  .main-content .jumbotron .signin-container {
+    width: 60%;
+    margin: 1rem 1rem 0 1rem;
+    height: 18rem;
+    padding: 1rem;
+  }
+  .form .message {
+    font-size: 10px;
+  }
+  .requests-card ul > li {
+    padding: 0.7rem;
+  }
+  .join-ride-btn {
+    padding: .5rem;
+    font-size: 0.7rem;
+  }
+  #create-ride {
+    width: 70%;
+    margin-top: 70px;
+    height: 15rem;
+    padding: 1rem;
+  }
+  table tr th{
+    font-size: 10px;
+    padding: 6px 5px;
+    margin: 15px;
+  }
+  table tr td {
+    font-size: 10px;
+    padding: 0.4em 1em;
+  }
+  select {
+    padding: 5px;;
+    font-size: 10px;
+  }
+  #profile_data {
+    position: relative;
+    top: 0;
+    left: 15px;
+    padding: 2px;
+    height: 50em;
+  }
+  #prof_tables {
+    position: absolute;
+    left: 15px;
+    top: 500px;
+  }
+  .form a input {
+    width: 96%;
+    border: 0;
+    padding: 10px;
+    font-size: 10px;
+  }
+}
+
+
+
+@media only screen and (max-width: 420px){
+ body{
+    font-size: 0.6rem;
+  }
+  .nav-link {
+    position: absolute;
+    left: -35px;
+    margin: -50px 0 0;
+  }
+  .nav-link li {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 0.5rem;
+  }
+  .navbar .logo{
+    visibility: hidden;
+  }
+
+  .info-section{
+    font-size: 1.5rem;
+  }
+  .form input{
+    margin: 0 0 10px;
+    padding: 10px;
+    font-size: 10px;
+  }
+  .requests-card ul > li {
+    padding: 0.7rem;
+  }
+  .join-ride-btn {
+    padding: .8rem;
+    font-size: 0.7rem;
+    margin-right: 1rem;
+  }
+  table {
+    border-spacing: 1px;
+    font-size: 0.5px;
   }
 }
