@@ -234,8 +234,8 @@ footer {
 #profile_data{
   position: fixed;
   left:50px;
-  padding:5px;
-  background-color:rgba(36, 35, 35, 0.637);
+  padding:10px;
+  background-color:rgba(36, 35, 35, 0.6);
   height: 33em;
 }
 
@@ -245,8 +245,8 @@ footer {
 }
 
 #profile_img{
-  max-width:250px;
-  max-height:250px;
+  max-width:100%;
+  max-height:50%;
   border-radius: 50%;
 }
 
@@ -386,7 +386,7 @@ h4{
     top: 0;
     left: 15px;
     padding: 2px;
-    height: 50em;
+    height: 40em;
   }
   #prof_tables {
     position: absolute;
@@ -398,6 +398,17 @@ h4{
     border: 0;
     padding: 10px;
     font-size: 10px;
+  }
+  #profile_grid h1 strong{
+    font-size: 15px;
+  }
+  #profile_grid div label {
+    font-size: 11px;
+  }
+  #profile_grid div span {
+    font-size: 12px;
+    padding: 5px;
+    margin: 5px;
   }
 }
 
@@ -481,5 +492,16 @@ h4{
     border: 0;
     padding: 10px;
     font-size: 10px;
+  }
+  #profile_grid h1 strong{
+    font-size: 15px;
+  }
+  #profile_grid div label {
+    font-size: 11px;
+  }
+  #profile_grid div span {
+    font-size: 12px;
+    padding: 5px;
+    margin: 5px;
   }
 }

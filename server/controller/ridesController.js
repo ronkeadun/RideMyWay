@@ -44,7 +44,7 @@ class Rides{
 		let ride = rides[id];
 		let newRide = req.body;
 		Object.assign(ride,newRide);
-		res.send(Object.assign(ride,newRide))
+		res.send();
 	}
 }
 
