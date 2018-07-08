@@ -1,7 +1,7 @@
 import express from "express";
 const router = express.Router();
 
-import Rides from "./../controller/ridesController";
+import Rides from "./../controllers/ridesController";
 
 //define route
 
@@ -9,17 +9,17 @@ import Rides from "./../controller/ridesController";
 router.get("/rides", Rides.getAllRides);
 
 //get a specific ride offer route
-router.get("/ride/:rideId", Rides.getSpecificRide);
+router.get("/rides/:rideId", Rides.getSpecificRide);
 
 //post all rides offer route
-router.post("/rides", Rides.postAllRide);
+//router.post("/rides", Rides.postAllRide);
 
 //create a ride route
-router.post("/ride", Rides.createARide);
+router.post("/rides", Rides.createARide);
 
 router.put("/rides/:rideId", Rides.editRide);
 
 
-router.get("/ride/info/:rideId", Rides.getRideInfo);
+router.get("/rides/info/:rideId", Rides.getRideInfo);
 
 export default router;
