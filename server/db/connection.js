@@ -14,7 +14,7 @@ if(process.env.NODE_ENV === 'test') {
         port: process.env.DB_PORT_TEST
     };
 }else if(process.env.NODE_ENV === 'production'){
-    config = process.env.DATABASE_URL;
+    config = {connectionString: process.env.DATABASE_URL};
 }else {
     config = {
         user: process.env.DB_USER,
