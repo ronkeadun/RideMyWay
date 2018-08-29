@@ -4,9 +4,11 @@
   "description": "A Carpooling Application",
   "main": "app.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-register",
+    "test": "mocha --compilers js:babel-register test/setup.js --exit",
+    "test:watch": "mocha --require babel-register --watch",
     "babel": "babel",
     "start": "babel-node app.js",
+    "rides:seed" : "babel-node ./server/db/rides",
     "start:dev": "nodemon app.js --exec babel-node"
   },
   "repository": {
@@ -27,12 +29,18 @@
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "supertest": "^3.1.0"
   },
   "dependencies": {
+    "bcrypt": "^3.0.0",
     "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
     "ejs": "^2.6.1",
+    "eslint": "^5.1.0",
     "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
+    "lodash": "^4.17.10",
     "pg": "^7.4.3",
     "volleyball": "^1.5.1"
   }
