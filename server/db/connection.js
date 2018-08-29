@@ -22,7 +22,7 @@ if(process.env.NODE_ENV === 'test') {
         database: process.env.DB_NAME,
         password: process.env.DB_PASS,
         port: process.env.DB_PORT,
-        //seed: process.env.SEED
+        seed: process.env.SEED
     };
  }
 
