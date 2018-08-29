@@ -13,6 +13,8 @@ if(process.env.NODE_ENV === 'test') {
         password: process.env.DB_PASSWORD_TEST,
         port: process.env.DB_PORT_TEST
     };
+}else if(process.env.NODE_ENV === 'production'){
+    config = DATABASE_URL
 }else {
     config = {
         user: process.env.DB_USER,
