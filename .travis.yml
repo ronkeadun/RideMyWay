@@ -1,1 +1,14 @@
 language: node_js
+
+node_js:
+  - "stable"
+
+services:
+  - postgresql
+
+script:
+  - mocha --compilers js:babel-register
+
+cache:
+  directories:
+    - "node_modules"
