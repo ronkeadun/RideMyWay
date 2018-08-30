@@ -8,7 +8,8 @@ describe('Test for rides endpoints', () =>{
 		it("should verify router request status", (done)=>{
 			request(app)
 				.get("/api/v1/rides")
-				.expect(200, done);
+				.expect(200);
+				done();
 		})
 		/*it("App should send back response", (done)=>{
 			request(app)
