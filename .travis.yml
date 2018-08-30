@@ -7,11 +7,7 @@ services:
   - postgresql
 
 script:
-  - mocha --compilers js:babel-register
-
-cache:
-  directories:
-    - "node_modules"
+  - mocha --require js:babel-register
 
 # safelist
 branches:
