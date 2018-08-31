@@ -1,13 +1,21 @@
 language: node_js
 
 node_js:
-  - "stable"
+  - node
+
+env:
+  global:
+    - DB_HOST_TEST=localhost
+    - DB_USER_TEST=ronke
+    - DB_PASSWORD_TEST=3377
+    - DB_PORT_TEST=5432
+    - DB_NAME_TEST=ridesDB
 
 services:
   - postgresql
 
 script:
-  - mocha --require js:babel-register
+  - mocha --require babel-register
 
 # safelist
 branches:
