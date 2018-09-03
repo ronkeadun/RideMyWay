@@ -10,6 +10,7 @@ env:
 services:
   - postgresql
 
+dist: trusty
 addons:
   postgresql: "10.4"
 
