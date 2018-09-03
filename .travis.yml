@@ -10,11 +10,16 @@ env:
 services:
   - postgresql
 
-script:
-  - mocha --require babel-register
+before_script:
+  - psql -c 'drop database if exists ridesDB;' -U postgres
+  - psql -c 'create database ridesDB;' -U postgres
 
 # safelist
 branches:
   only:
   - master
   - gh-pages
+
+cache:
+  directories:
+    - "node_modules"
