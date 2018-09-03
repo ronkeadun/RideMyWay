@@ -10,9 +10,15 @@ env:
 services:
   - postgresql
 
-dist: trusty
 addons:
-  postgresql: "10.4"
+  postgresql: "10"
+  apt:
+    packages:
+    - postgresql-10
+    - postgresql-client-10
+env:
+  global:
+  - PGPORT=5432
 
 before_script:
   - psql -c 'drop database if exists ridesDB;' -U postgres
