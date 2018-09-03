@@ -22,7 +22,3 @@ branches:
   only:
   - master
   - gh-pages
-
-cache:
-  directories:
-    - "node_modules"
