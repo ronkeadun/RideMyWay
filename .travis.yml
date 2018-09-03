@@ -10,6 +10,9 @@ env:
 services:
   - postgresql
 
+addons:
+  postgresql: "10.4"
+
 before_script:
   - psql -c 'drop database if exists ridesDB;' -U postgres
   - psql -c 'create database ridesDB;' -U postgres
