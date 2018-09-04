@@ -21,8 +21,8 @@ env:
   - PGPORT=5433
 
 before_script:
-  - psql -c 'drop database if exists ridesDB;' -U postgres
-  - psql -c 'create database ridesDB;' -U postgres
+  - psql -c 'drop database if exists ridesDB;' -U ronke
+  - psql -c 'create database ridesDB;' -U ronke
 
 script:
   - mocha --require babel-register
