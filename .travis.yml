@@ -10,8 +10,13 @@ env:
 services:
   - postgresql
 
-sudo: false
 dist: trusty
+sudo: required
+
+before_install:
+- sudo sed -i -e '/local.*peer/s/postgres/all/' -e 's/peer\|md5/trust/g' /etc/postgresql/*/main/pg_hba.conf
+- sudo service postgresql restart
+- sleep 1
 
 addons:
   postgresql: "10"
@@ -24,7 +29,8 @@ env:
   - PGPORT=5433
 
 before_script:
-  - psql -c "ALTER USER travis WITH PASSWORD 'travis';"
+  - sudo -u postgres psql -c 'drop database if exists ridesDB;' 
+  - sudo -u postgres psql -c 'create database ridesDB;'
 
 script:
   - mocha --require babel-register
