@@ -10,8 +10,8 @@ env:
 services:
   - postgresql
 
+sudo: false
 dist: trusty
-sudo: required
 
 addons:
   postgresql: "10"
@@ -24,8 +24,7 @@ env:
   - PGPORT=5433
 
 before_script:
-  - sudo -u postgres psql -c 'drop database if exists ridesDB;' 
-  - sudo -u postgres psql -c 'create database ridesDB;'
+  - psql -c "ALTER USER travis WITH PASSWORD 'travis';"
 
 script:
   - mocha --require babel-register
