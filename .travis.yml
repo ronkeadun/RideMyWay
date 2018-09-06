@@ -10,6 +10,8 @@ env:
 services:
   - postgresql
 
+dist: trusty
+sudo: required
 
 addons:
   postgresql: "10"
@@ -17,10 +19,9 @@ addons:
     packages:
     - postgresql-10
     - postgresql-client-10
-
 env:
   global:
-    - PGPORT=5433
+  - PGPORT=5433
 
 before_script:
   - sudo -u postgres psql -c 'drop database if exists ridesDB;' 
