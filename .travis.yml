@@ -10,8 +10,6 @@ env:
 services:
   - postgresql
 
-dist: trusty
-sudo: required
 
 addons:
   postgresql: "10"
@@ -20,9 +18,13 @@ addons:
     - postgresql-10
     - postgresql-client-10
 
+env:
+  global:
+    - PGPORT=5433
+
 before_script:
-  - psql -c 'drop database if exists ridesDB;' -U postgres
-  - psql -c 'create database ridesDB;' -U postgres
+  - sudo -u postgres psql -c 'drop database if exists ridesDB;' 
+  - sudo -u postgres psql -c 'create database ridesDB;'
 
 script:
   - mocha --require babel-register
