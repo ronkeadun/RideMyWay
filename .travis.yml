@@ -4,7 +4,13 @@ node_js:
   - "stable"
 
 env:
-  - NODE_ENV="development"
+  global:
+  - PGPORT=5433
+  - DB_USER_TEST=ronke
+  - DB_HOST_TEST=localhost
+  - DB_NAME_TEST=ridesDB
+  - DB_PASSWORD_TEST=3377
+  - DB_PORT_TEST=5432
 
 
 services:
@@ -16,13 +22,7 @@ addons:
     packages:
     - postgresql-10
     - postgresql-client-10
-env:
-  global:
-  - DB_USER_TEST=ronke
-  - DB_HOST_TEST=localhost
-  - DB_NAME_TEST=ridesDB
-  - DB_PASSWORD_TEST=3377
-  - DB_PORT_TEST=5432
+
 
 before_script:
   - psql -c 'drop database if exists ridesDB;' -U postgres
