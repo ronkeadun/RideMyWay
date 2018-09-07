@@ -3,14 +3,12 @@ language: node_js
 node_js:
   - "stable"
 
+dist: trusty 
+sudo: required
+
 env:
   global:
   - PGPORT=5433
-  - DB_USER_TEST=ronke
-  - DB_HOST_TEST=localhost
-  - DB_NAME_TEST=ridesDB
-  - DB_PASSWORD_TEST=3377
-  - DB_PORT_TEST=5432
 
 
 services:
