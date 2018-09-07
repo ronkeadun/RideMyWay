@@ -23,8 +23,8 @@ addons:
 
 
 before_script:
-  - psql -c 'drop database if exists ridesDB;' -U postgres
-  - psql -c 'create database ridesDB;' -U postgres
+  - sudo -u postgres psql -c 'drop database if exists ridesDB;' 
+  - sudo -u postgres psql -c 'create database ridesDB;' 
 
 script:
   - mocha --require babel-register
