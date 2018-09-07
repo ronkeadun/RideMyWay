@@ -6,11 +6,6 @@ node_js:
 dist: trusty 
 sudo: required
 
-env:
-  global:
-  - PGPORT=5433
-
-
 services:
   - postgresql
 
@@ -20,6 +15,13 @@ addons:
     packages:
     - postgresql-10
     - postgresql-client-10
+
+env:
+  global:
+  - PGPORT=5433
+  - DATABASE_DEVELOPMENT_URL=postgres://postgres@127.0.0.1:5432/travis
+  - DATABASE_TEST_URL=postgres://postgres@127.0.0.1:5432/ronke
+  - SECRET_KEY='3377'
 
 
 before_script:
