@@ -18,11 +18,11 @@ addons:
     - postgresql-client-10
 env:
   global:
-  - process.env.DB_USER_TEST=ronke
-  - process.env.DB_HOST_TEST=localhost
-  - process.env.DB_NAME_TEST=ridesDB
-  - process.env.DB_PASSWORD_TEST=3377
-  - process.env.DB_PORT_TEST=5432
+  - DB_USER_TEST=ronke
+  - DB_HOST_TEST=localhost
+  - DB_NAME_TEST=ridesDB
+  - DB_PASSWORD_TEST=3377
+  - DB_PORT_TEST=5432
 
 before_script:
   - psql -c 'drop database if exists ridesDB;' -U postgres
