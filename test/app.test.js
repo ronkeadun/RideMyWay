@@ -20,7 +20,7 @@ describe('Test for rides endpoints', () =>{
 	        request(app)
 		        .get('/api/v1/rides')
 		        .set('Accept', 'application/json')
-		        .set('Content-Type', 'application/x-www-form-urlencoded')
+		        .set('Content-Type', 'application/json')
 		        .end((err, res) => {
 			        expect(err).to.equal(null);
 			        expect(res.status).to.equal(200);
@@ -37,7 +37,7 @@ describe('Test for rides endpoints', () =>{
 	        request(app)
 		        .get(`/api/v1/rides/${ride.id}`)
 		        .set('Accept', 'application/json')
-		        .set('Content-Type', 'application/x-www-form-urlencoded')
+		        .set('Content-Type', 'application/json')
 		        .end((err, res) => {
 			        expect(err).to.equal(null);
 			        expect(res.status).to.equal(200);
@@ -54,7 +54,7 @@ describe('Test for rides endpoints', () =>{
 	        request(app)
 		        .post('/api/v1/rides')
 		        .set('Accept', 'application/json')
-		        .set('Content-Type', 'application/x-www-form-urlencoded')
+		        .set('Content-Type', 'application/json')
 		        .send({
 		        	requester: "Stephen John",
 		        	pickup_location: "Isolo", 
