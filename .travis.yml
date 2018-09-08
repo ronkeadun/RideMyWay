@@ -31,6 +31,7 @@ before_script:
     # Use 9.6 auth config:
     - sudo cp /etc/postgresql/{9.6,10}/main/pg_hba.conf
     - sudo service postgresql restart
+    - sudo -u postgres psql -c "CREATE DATABASE ridesDB;"  
 
 script:
   - mocha --require babel-register
