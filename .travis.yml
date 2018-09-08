@@ -30,7 +30,10 @@ before_script:
     - sudo sed -i 's/port = 5433/port = 5432/' /etc/postgresql/10/main/postgresql.conf
     # Use 9.6 auth config:
     - sudo cp /etc/postgresql/{9.6,10}/main/pg_hba.conf
+    - sudo sed -i -e '/local.*peer/s/postgres/all/' -e 's/peer\|md5/trust/g' /etc/postgresql/*/main/pg_hba.conf
     - sudo service postgresql restart
+    - sleep 1
+    - psql -c "ALTER USER postgres WITH PASSWORD '3377';"
     - sudo -u postgres psql -c "CREATE DATABASE ridesDB;"  
 
 script:
