@@ -23,7 +23,7 @@ env:
 
 
 before_script:
-  - sudo -u postgres psql -c "CREATE USER ronke PASSWORD 3377';"
+  - sudo -u postgres psql -c "CREATE USER ronke PASSWORD '3377';"
   - sudo -u postgres psql -c 'create database ridesDB;' 
 
 script:
