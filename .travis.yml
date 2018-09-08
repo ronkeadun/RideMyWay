@@ -19,7 +19,7 @@ addons:
 
 env:
   global:
-    - DB_USER_TEST=ronke
+    - DB_USER_TEST=postgres
     - DB_HOST_TEST=localhost
     - DB_NAME_TEST=ridesDB
     - DB_PASSWORD_TEST=3377
