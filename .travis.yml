@@ -17,6 +17,14 @@ addons:
     - postgresql-10
     - postgresql-client-10
 
+env:
+  global:
+    - DB_USER_TEST=ronke
+    - DB_HOST_TEST=localhost
+    - DB_NAME_TEST=ridesDB
+    - DB_PASSWORD_TEST=3377
+    - DB_PORT_TEST=5432
+
 before_script:
     # Use default port
     - sudo sed -i 's/port = 5433/port = 5432/' /etc/postgresql/10/main/postgresql.conf
