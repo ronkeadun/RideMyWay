@@ -22,6 +22,10 @@ env:
   - PGPORT=5433
 
 
+before_script:
+  - sudo -u postgres psql -c "CREATE USER ronke PASSWORD 3377';"
+  - sudo -u postgres psql -c 'create database ridesDB;' 
+
 script:
   - mocha --require babel-register
 
