@@ -20,10 +20,6 @@ addons:
     global:
     - PGPORT=5433
 
-postgres:
-  adapter: postgresql
-  database: travis_ci_test
-  username: postgres
 
 before_script:
     - sudo -u postgres psql -c "CREATE DATABASE ridesDB;"
