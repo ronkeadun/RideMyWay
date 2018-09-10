@@ -26,7 +26,7 @@ postgres:
   username: postgres
 
 before_script:
-    - sudo -u postgres psql -c 'CREATE DATABASE ridesDB;'
+    - sudo -u postgres psql -c "CREATE DATABASE ridesDB;"
     - rake db:migrate
 
 script:
