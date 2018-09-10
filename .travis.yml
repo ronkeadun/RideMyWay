@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-  - "node"
+  - "stable"
 
 sudo: true
 dist: trusty 
@@ -16,16 +16,18 @@ addons:
     packages:
     - postgresql-10
     - postgresql-client-10
+  env:
+    global:
+    - PGPORT=5433
+
+postgres:
+  adapter: postgresql
+  database: travis_ci_test
+  username: postgres
 
 before_script:
-    # Use default port
-    - sudo sed -i 's/port = 5433/port = 5432/' /etc/postgresql/10/main/postgresql.conf
-    # Use 9.6 auth config:
-    - sudo cp /etc/postgresql/{9.6,10}/main/pg_hba.conf
-    - sudo sed -i -e '/local.*peer/s/postgres/all/' -e 's/peer\|md5/trust/g' /etc/postgresql/*/main/pg_hba.conf
-    - sudo service postgresql restart
-    - sleep 1
-    - sudo -u postgres psql -c "CREATE DATABASE ridesDB;"  
+    - psql -c 'CREATE DATABASE ridesDB;' -U postgres
+    - rake db:migrate
 
 script:
   - mocha --require babel-register
