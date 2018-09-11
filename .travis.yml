@@ -3,13 +3,14 @@ language: node_js
 node_js:
   - "stable"
 
-sudo: false
-dist: trusty
+jdk:
+  - openjdk10
 
 services:
  - postgresql 
 
 addons:
+  firefox: latest
   apt:
     packages:
       - postgresql-10
@@ -27,6 +28,15 @@ env:
 before_script:
   - psql -c "ALTER USER ${DB_USER_TEST} WITH PASSWORD '${DB_PASSWORD_TEST}';"
   - psql -c "CREATE DATABASE ${DB_NAME_TEST} WITH OWNER = ${DB_USER_TEST};"
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 # give xvfb some time to start
+  - wget https://github.com/mozilla/geckodriver/releases/download/v0.21.0/geckodriver-v0.21.0-linux64.tar.gz
+  - tar zxvf geckodriver-v0.21.0-linux64.tar.gz
+  - rm geckodriver-v0.21.0-linux64.tar.gz
+  - sudo mv -f geckodriver /usr/local/share/
+  - sudo chmod +x /usr/local/share/geckodriver
+  - sudo ln -s /usr/local/share/geckodriver /usr/local/bin/geckodriver
 
 
 
