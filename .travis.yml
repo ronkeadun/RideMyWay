@@ -7,7 +7,7 @@ sudo: false
 dist: trusty
 
 services:
- - postgresql 10.4
+ - postgresql 
 
 addons:
   apt:
@@ -15,12 +15,18 @@ addons:
       - postgresql-10
       - postgresql-client-10
   postgresql: "10"
+
 env:
   global:
     - PGPORT=5433
+    - DB_USER_TEST=postgres
+    - DB_HOST_TEST=localhost
+    - DB_NAME_TEST=ridesDB
+    - DB_PASSWORD_TEST=3377
+
 before_script:
-  - psql -c "ALTER USER travis WITH PASSWORD 'travis';"
-  - psql -c "CREATE DATABASE ridesDB;"
+  - psql -c "CREATE USER ${DB_USER_TEST} ENCRYPTED PASSWORD '${DB_PASSWORD_TEST}';"
+  - psql -c "CREATE DATABASE ${DB_NAME_TEST} WITH OWNER = ${DB_USER_TEST};"
 
 
 
