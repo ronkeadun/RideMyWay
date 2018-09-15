@@ -36,7 +36,7 @@ class Rides{
 				return next(err);
 			}
 			//client("sql", call back function)
-			client.query("SELECT * FROM rides WHERE ride_id=$1", [req.params.rideId], (err,result)=>{
+			client.query("SELECT * FROM rides WHERE rideid=$1", [req.params.rideId], (err,result)=>{
 				//call done to release the client back to the pool
 		        done();
 				if(err){
@@ -115,7 +115,7 @@ class Rides{
 				return next(err);
 			}
 			//client("sql", call back function)
-			client.query("DELETE FROM rides WHERE ride_id=$1", [req.params.rideId], (err,result)=>{
+			client.query("DELETE FROM rides WHERE rideid=$1", [req.params.rideId], (err,result)=>{
 				//call done to release the client back to the pool
 		        done();
 				if(err){
@@ -144,7 +144,7 @@ class Rides{
 		        message: 'Please provide number_of_available_seats field'
       		});
 	    }else{
-	    	const queryString = "UPDATE rides SET requester=$1, pickup_location=$2, destination=$3, take_off_time=$4, number_of_available_seats=$5 WHERE ride_id=$6 RETURNING * ";
+	    	const queryString = "UPDATE rides SET requester=$1, pickup_location=$2, destination=$3, take_off_time=$4, number_of_available_seats=$5 WHERE rideid=$6 RETURNING * ";
 			const data = [
 			    requester,
 			    pickup_location,

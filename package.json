@@ -4,12 +4,13 @@
   "description": "A Carpooling Application",
   "main": "app.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-register test/setup.js --exit",
+    "test": "nyc mocha --compilers js:babel-register test/setup.js test/ --exit",
     "test:watch": "mocha --require babel-register --watch",
     "babel": "babel",
     "start": "babel-node app.js",
     "rides:seed": "babel-node ./server/db/rides",
-    "start:dev": "nodemon app.js --exec babel-node"
+    "start:dev": "nodemon app.js --exec babel-node",
+    "coverage": "nyc --reporter=lcov --reporter=text-lcov npm test"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
     "mocha": "^5.2.0",
+    "nyc": "^13.0.1",
     "supertest": "^3.1.0"
   },
   "dependencies": {

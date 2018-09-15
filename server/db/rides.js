@@ -1,10 +1,10 @@
-import app from '../../app';
+//import app from '../../app';
 import pool from './connection';
 const seed = (c)=>{
-        const sql = `
+    const sql = `
         DROP TABLE IF EXISTS rides;
         CREATE TABLE rides(
-            ride_id SERIAL PRIMARY KEY, 
+            rideid SERIAL PRIMARY KEY, 
             requester VARCHAR(255), 
             pickup_location VARCHAR(255), 
             destination VARCHAR(255),
@@ -21,15 +21,15 @@ const seed = (c)=>{
         VALUES ('Sola Matthew', 'Opebi', 'Berger', '5:10pm', 4);
         INSERT INTO rides(requester, pickup_location, destination, take_off_time, number_of_available_seats) 
         VALUES ('Naomi Maxwell', 'Yaba', 'Ikeja', '12:00pm', 0);
-        `;
-        c.query(sql, (err,result)=>{
-            if(err){
-                return console.error("error running query", err);
-            }
-            console.log("seed some data");
-            return console.log(result);
-        });
-    }
+    `;
+    c.query(sql, (err,result)=>{
+        if(err){
+            return console.error("error running query", err);
+        }
+        console.log("seed some data");
+        return console.log(result);
+    });
+}
 
 const rides = pool.connect( (err,client,done)=>{
     if(err){
