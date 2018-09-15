@@ -4,7 +4,7 @@ import path from "path";
 import bodyParser from "body-parser";
 import volleyball from "volleyball";
 import rideRoutes from "./server/routers/rides";
-//import rides from "./server/db/rides";
+import rides from "./server/db/rides";
 //import pg from "pg";
 
 import authRoutes from "./server/auth";
