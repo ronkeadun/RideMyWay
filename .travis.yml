@@ -22,7 +22,6 @@ env:
 
 before_script:
   - psql -c "ALTER USER travis WITH PASSWORD 'travis';"
-  - psql -c "CREATE DATABASE ridesDB WITH OWNER = travis;"
 
 
 
