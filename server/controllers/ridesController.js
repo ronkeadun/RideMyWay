@@ -20,11 +20,12 @@ class Rides{
             			message: 'No Ride Offer Available',
           			})
         		} else {
-          			res.status(200).json({  
-            			status: 'success',
-            			message: 'Returning all available ride offers',
-            			rides: result.rows, 
-          			})
+          			res.status(200).json(  
+            			// status: 'success',
+            			// message: 'Returning all available ride offers',
+            			// rides: result.rows, 
+            			result.rows
+          			)
         		}
 			});
 		});
@@ -36,7 +37,7 @@ class Rides{
 				return next(err);
 			}
 			//client("sql", call back function)
-			client.query("SELECT * FROM rides WHERE rideid=$1", [req.params.rideId], (err,result)=>{
+			client.query("SELECT * FROM rides WHERE id=$1", [req.params.rideId], (err,result)=>{
 				//call done to release the client back to the pool
 		        done();
 				if(err){
@@ -59,16 +60,16 @@ class Rides{
 	}
 
 	static createARide(req, res, next){
-		const {requester,pickup_location, destination, take_off_time, number_of_available_seats} = req.body;
+		const {ride_owner,pickup_location, destination, take_off_time, number_of_available_seats} = req.body;
 		if ( (number_of_available_seats === undefined)) {
 	      	res.status(400).json({
 		        status: 'error',
 		        message: 'Please provide number_of_available_seats field'
       		});
 	    }else{
-	    	const queryString = "INSERT INTO rides(requester,pickup_location, destination, take_off_time, number_of_available_seats) VALUES($1, $2, $3, $4, $5) RETURNING * ";
+	    	const queryString = "INSERT INTO rides(ride_owner,pickup_location, destination, take_off_time, number_of_available_seats) VALUES($1, $2, $3, $4, $5) RETURNING * ";
 			const data = [
-			    requester,
+			    ride_owner,
 			    pickup_location,
 			    destination,
 			    take_off_time,
@@ -87,6 +88,7 @@ class Rides{
 					}
 					console.log(result.rows);
 					//res.redirect("/api/v1/rides");
+					res.json(result.rows)
 				});
 			});
 		}
@@ -115,7 +117,7 @@ class Rides{
 				return next(err);
 			}
 			//client("sql", call back function)
-			client.query("DELETE FROM rides WHERE rideid=$1", [req.params.rideId], (err,result)=>{
+			client.query("DELETE FROM rides WHERE id=$1", [req.params.rideId], (err,result)=>{
 				//call done to release the client back to the pool
 		        done();
 				if(err){

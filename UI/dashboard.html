@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset = "UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Dashboard</title>
     <link href="https://fonts.googleapis.com/css?family=Kurale|Raleway" rel="stylesheet">
@@ -9,86 +10,101 @@
 </head>
 
 <body>
-<!-- navbar -->
-<nav class="navbar">
-    <a href="#" class="logo">RideMyWay</a>
-    <ul class="nav-link">
-      <li>
-        <i class="fa fa-plus"></i>
-        <a href="create_ride_offer.html">Create Ride Offer</a> 
-      </li>
-      <li>
-        <i class="fa fa-user"></i>
-        <a href="profile_page.html">My Profile</a> 
-      </li>
-      <li>
-        <i class="fa fa-power-off"></i>
-        <a href="index.html">Logout</a> 
-      </li>
-    </ul>
-</nav>
-<section class="main-content">
-  <div class="requests-board">
-    <div class="requests-card">
-      <ul>
+  <div class='wrapper'>
+    <!-- navbar -->
+    <nav class="navbar">
+      <a href="#" class="logo">RideMyWay</a>
+      <ul class="nav-link">
         <li>
-          <strong> 
-            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-            Requester: 
-          </strong>Stephen John</li>
-        <li><strong>Pickup Location:</strong> Isolo</li>
-        <li><strong>Destination:</strong> Agege</li>
-        <li><strong>Take off time:</strong> 4:30pm</li>
-        <li><strong>Number of Available Seats:</strong> 4</li>
-      </ul>
-      <button class="join-ride-btn"> Join Ride </button>
-    </div>
-    <div class="requests-card">
-      <ul>
+          <i class="fa fa-plus"></i>
+          <a href="create_ride_offer.html">Create Ride Offer</a> 
+        </li>
         <li>
-          <strong> 
-            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-            Requester: 
-          </strong>James Steve</li>
-        <li><strong>Pickup Location:</strong> Apapa</li>
-        <li><strong>Destination:</strong> Ketu</li>
-        <li><strong>Take off time:</strong> 2:30pm</li>
-        <li><strong>Number of Available Seats:</strong> 1</li>
-      </ul>
-      <button class="join-ride-btn"> Join Ride </button>  
-    </div>
-    <div class="requests-card">
-      <ul>
+          <i class="fa fa-user"></i>
+          <a href="profile_page.html">My Profile</a> 
+        </li>
         <li>
-          <strong> 
-            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-            Requester: 
-          </strong>Sola Matthew</li>
-        <li><strong>Pickup Location:</strong> Opebi</li>
-        <li><strong>Destination:</strong> Berger</li>
-        <li><strong>Take off time:</strong> 5:10pm</li>
-        <li><strong>Number of Available Seats:</strong> 3</li>
+          <i class="fa fa-power-off"></i>
+          <a href="index.html">Logout</a> 
+        </li>
       </ul>
-      <button class="join-ride-btn"> Join Ride </button>
-    </div>
-    <div class="requests-card">
-      <ul>
-        <li>
-          <strong> 
-            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-            Requester: 
-          </strong> Naomi Maxwell</li>
-        <li><strong>Pickup Location:</strong> Yaba</li>
-        <li><strong>Destination:</strong>Ikeja</li>
-        <li><strong>Take off time:</strong> 12:00pm</li>
-        <li><strong>Number of Available Seats:</strong> 1</li>
-      </ul>
-      <button class="join-ride-btn"> Join Ride </button>      
-    </div>
+    </nav>
+    <section class="main-content">
+      <div class="requests-board" >
+
+        <div class="requests-card">
+          <ul>
+            <li>
+              <strong> 
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                Ride Owner: 
+              </strong>Stephen John</li>
+            <li><strong>Pickup Location:</strong> Isolo</li>
+            <li><strong>Destination:</strong> Agege</li>
+            <li><strong>Take off time:</strong> 4:30pm</li>
+            <li><strong>Number of Available Seats:</strong> 4</li>
+          </ul>
+          <button class="join-ride-btn"> Join Ride </button>
+        </div>
+
+        <div class="requests-card">
+          <ul>
+            <li>
+              <strong> 
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                Ride Owner: 
+              </strong>James Steve</li>
+            <li><strong>Pickup Location:</strong> Apapa</li>
+            <li><strong>Destination:</strong> Ketu</li>
+            <li><strong>Take off time:</strong> 2:30pm</li>
+            <li><strong>Number of Available Seats:</strong> 1</li>
+          </ul>
+          <button class="join-ride-btn"> Join Ride </button>  
+        </div>
+
+        <div class="requests-card">
+          <ul>
+            <li>
+              <strong> 
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i>Ride Owner:</strong>Sola Matthew</li>
+            <li><strong>Pickup Location:</strong> Opebi</li>
+            <li><strong>Destination:</strong> Berger</li>
+            <li><strong>Take off time:</strong> 5:10pm</li>
+            <li><strong>Number of Available Seats:</strong> 3</li>
+          </ul>
+          <button class="join-ride-btn"> Join Ride </button>
+        </div>
+
+        <div class="requests-card">
+          <ul>
+            <li>
+              <strong> 
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                Ride Owner: 
+              </strong> Naomi Maxwell</li>
+            <li><strong>Pickup Location:</strong> Yaba</li>
+            <li><strong>Destination:</strong> Ikeja</li>
+            <li><strong>Take off time:</strong> 12:00pm</li>
+            <li><strong>Number of Available Seats:</strong> 1</li>
+          </ul>
+          <button class="join-ride-btn"> Join Ride </button>      
+        </div>
+
+        <div class="requests-board" id="output">
+          <div  id="outputChildren"></div>
+        </div>
+
+      </div>
+    
+    </section>
   </div>
-  </section>
+
   <footer>
+    <div class='wrapper'>
       <span>Copyright 2018</span>
+    </div>
   </footer>
-  </body>
-  </html>
+
+  <script type="text/javascript" src="./js/fetch.js"></script>
+</body>
+</html>

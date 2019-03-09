@@ -8,7 +8,10 @@
     "test:watch": "mocha --require babel-register --watch",
     "babel": "babel",
     "start": "babel-node app.js",
+    "drivers:seed": "babel-node ./server/db/drivers",
     "rides:seed": "babel-node ./server/db/rides",
+    "passengers:seed": "babel-node ./server/db/passengers",
+    "requests:seed": "babel-node ./server/db/requests",
     "start:dev": "nodemon app.js --exec babel-node",
     "coverage": "nyc --reporter=lcov --reporter=text-lcov npm test"
   },

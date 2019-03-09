@@ -1,20 +1,29 @@
-body {
-	margin: 0;
+html, body {
+	margin: 0 auto;
+  padding: 0;
 	font-family: Roboto;
-	font-size: 1rem;
+	font-size: 100%;
 	font-weight: 400;
 	line-height: 1.5;
 	color: #212529;
 	text-align: left;
-	max-width: 100%;
-	height: 100%;
-	overflow-x: hidden;
-  overflow-y: hidden;
+	width: 100vw;
+	height: 100vh;
 	background-color: #fff;
 	font-family: 'Raleway', sans-serif;
+  display: table;
 }
 
+.wrapper{
+  padding: 20px;
+  /*height: auto;*/
+}
 
+@font-face{
+  font-family:logo-font;
+  src:url('fonts/Admiration Pains.ttf'), url('Admiration Pains.eot');  
+}
+  
 .form{
 	position: relative;
 	text-align: center;
@@ -102,27 +111,33 @@ select{
 	padding: 1rem;
 	position: absolute;
 	top: 0;
+  left: -16px;
+  /*right: 0;*/
 	width: 100%;
+  padding-right: 0;
 }
 .navbar .logo {
 	color: #fff;
 	font-size: 2rem;
 	text-decoration: none;
-	font-family: 'Kurale', serif;
+	/*font-family: 'Kurale', serif;*/
+  font-family: logo-font;
+  padding-left: 20px;
 }
 .main-content {
-	min-height: 100%
+	min-height: 100%;
 }
 .main-content .jumbotron {
 	position: absolute;
 	width: 100%; 
-	height: 80.3vh;
+	height: 81vh;
 	background-image: url('../images/headerBackground.jpg');
 	background-position: center;
 	background-size: cover;
+  background-attachment: fixed;
 	top: 6rem;
-  margin-top: -20px;
-  margin-bottom: -20px;
+  left: 0;
+  margin: -20px 0;
 	display: flex;
 	justify-content: space-between;
 	overflow: auto;
@@ -148,30 +163,23 @@ select{
 	font-family: 'Kurale', serif;
 	margin: 1rem;
 }
-footer {
-	height: 1rem;
-	padding: 1.5rem;
-	background-color: #00BCD4;
-	position: absolute;
-	bottom: 0;
-	color: #fff;
-	text-align: center;
-	width: 100%;
-}
+
 
 
 /*Dashboard styling*/
 .nav-link {
-    float: right;
-    list-style: none;
-    color: #fff;
-    margin: 0 2rem;
-  }
+  float: right;
+  list-style: none;
+  color: #fff;
+  margin: -0.5rem 2rem;
+}
+
 .nav-link li {
   display: inline-block;
   padding: 1rem;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-family: 'Kurale', serif;
   border-radius: 1rem;
 }
 .nav-link li:hover {
@@ -188,6 +196,27 @@ footer {
   display: flex;
   justify-content: space-around;
 }
+
+div#output {
+  width: 100%;
+  /*-webkit-column-count: 3;
+  -webkit-column-rule: 2px solid #000;*/
+}
+
+#output {
+  position: absolute;
+  top: 500px;
+  left: -500px;
+}
+
+#output > div{
+  position: absolute;
+}
+
+/*#outputChildren > div{
+  position: relative;
+}*/
+
 .requests-card {
   width: 20%;
   border: 1px solid #ccc;
@@ -237,7 +266,7 @@ footer {
   left:50px;
   padding:10px;
   background-color:rgba(36, 35, 35, 0.6);
-  height: 33em;
+  height: 31em;
 }
 
 #prof_tables{
@@ -299,7 +328,7 @@ table{
   font-size:15px;
 }
 table tr th{
-  font-size: 15px;
+  font-size: 10px;
   color:#ffffff;
   line-height: 1.5;
   padding: 16px 10px;
@@ -308,7 +337,7 @@ table tr th{
   background-color: #393939;
 }
 table tr td{
-  font-size:17px;
+  font-size:12px;
   color: #ffffff;
   line-height: 1.5;
   background-color: #222222;
@@ -320,25 +349,25 @@ h4{
   text-align: center;
 }
 
-@media only screen and (min-width: 420px) and (max-width: 780px){
+footer {
+  height: 1px;
+  background-color: #00BCD4;
+  color: #fff;
+  text-align: center;
+  /*width: 100%;*/
+  display: table-row;
+}
 
-  body{
-    font-size: 0.6rem;
-  }
-  .nav-link {
-    position: absolute;
-    left: -35px;
-    margin: -50px 0 0;
-  }
+@media only screen and (min-width: 450px) and (max-width: 780px){
+  html{
+    font-size: 50%;
+  } 
+ 
   .nav-link li {
     padding: 0.5rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
     border-radius: 0.5rem;
   }
-  .navbar .logo{
-    visibility: hidden;
-  }
-
   .info-section{
     font-size: 1.5rem;
   }
@@ -347,10 +376,13 @@ h4{
     padding: 10px;
     font-size: 10px;
   }
+  .main-content .jumbotron{
+    height: 90%;
+  }
   .main-content .jumbotron .signin-container {
     width: 60%;
     margin: 1rem 1rem 0 1rem;
-    height: 18rem;
+    height: 23rem;
     padding: 1rem;
   }
   .form .message {
@@ -366,7 +398,7 @@ h4{
   #create-ride {
     width: 70%;
     margin-top: 70px;
-    height: 15rem;
+    height: 35rem;
     padding: 1rem;
   }
   table tr th{
@@ -411,27 +443,25 @@ h4{
     padding: 5px;
     margin: 5px;
   }
-}
+} 
 
-
-
-@media only screen and (max-width: 420px){
-  body{
-    font-size: 0.6rem;
+@media only screen and (max-width: 450px){
+  html{
+    font-size: 50%;
   }
-  .nav-link {
+  /*.nav-link {
     position: absolute;
     left: -35px;
     margin: -50px 0 0;
-  }
+  }*/
   .nav-link li {
     padding: 0.5rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     border-radius: 0.5rem;
   }
-  .navbar .logo{
+  /*.navbar .logo{
     visibility: hidden;
-  }
+  }*/
 
   .info-section{
     font-size: 1.5rem;
@@ -441,10 +471,13 @@ h4{
     padding: 10px;
     font-size: 10px;
   }
+  .main-content .jumbotron{
+    height: 87%;
+  }
   .main-content .jumbotron .signin-container {
     width: 60%;
     margin: 1rem 1rem 0 1rem;
-    height: 18rem;
+    height: 23rem;
     padding: 1rem;
   }
   .form .message {
@@ -460,7 +493,7 @@ h4{
   #create-ride {
     width: 70%;
     margin-top: 70px;
-    height: 15rem;
+    height: 35rem;
     padding: 1rem;
   }
   table tr th{
@@ -505,4 +538,4 @@ h4{
     padding: 5px;
     margin: 5px;
   }
-}
+} 

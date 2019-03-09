@@ -4,7 +4,7 @@ import path from "path";
 import bodyParser from "body-parser";
 import volleyball from "volleyball";
 import rideRoutes from "./server/routers/rides";
-import rides from "./server/db/rides";
+//import rides from "./server/db/rides";
 //import pg from "pg";
 
 import authRoutes from "./server/auth";
@@ -33,9 +33,16 @@ client.connect((err)=>{
 
 //use middleware
 app.use(volleyball);
-app.use(express.static(path.join(__dirname, "UI")));
+app.use(express.static("UI"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
+
+app.use((req, res, next)=>{
+	res.header("Access-Control-Allow-Origin", "*")
+	//res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE")
+	res.header("Access-Control-Allow-Headers", "Content-Type")
+	next()
+})
 
 
 
@@ -54,6 +61,9 @@ app.use((err, req, res, next)=>{
 	})
 });
 
+// app.get("/", (req, res)=>{
+// 	res.sendFile(path.join(__dirname, "/create_ride_offer.html"))
+// })
 
 const port = process.env.PORT || 3000;
 
